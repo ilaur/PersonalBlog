@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/header.ejs") %>
+  <body>
+    <main class="flex-shrink-0">
+      <%- include("partials/nav-bar.ejs", { title: "My Blog", options: [ { name:
+      "Add Post", link: "/add" }] }) %> <% data.forEach((post, index) => { %>
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary-emphasis"
+          ><%= post.category %></strong
+        >
+        <h3 class="mb-0"><%= post.title %></h3>
+        <div class="mb-1 text-body-secondary"><%= post.date %></div>
+        <p class="card-text mb-auto"><%= post.description %></p>
+        <a href="/post?index=<%= index %>" class="gap-1"> Continue reading </a>
+      </div>
+      <% }) %>
+    </main>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>

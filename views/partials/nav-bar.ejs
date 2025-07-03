@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm sticky-top justify-content-center">
+  <div class="container-fluid">
+    <a class="navbar-brand"><%= title %></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarColl"
+      aria-controls="navbarColl"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColl">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <% options.forEach((option) => { %>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= option.link %>"> <%= option.name %> </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</nav>

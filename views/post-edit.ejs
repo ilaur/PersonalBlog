@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/header.ejs") %> <%- include("partials/nav-bar.ejs", {
+  title: "My Blog", options: [{ name: "Home", link: "/" }]} ) %>
+  <body>
+    <main class="flex-shrink-0 mb-3 align-items-center">
+      <form action="/save?index=<%= index %>" method="post">
+        <div class="mb-3 mx-2">
+          <label for="title-input" class="form-label">Title</label>
+          <input
+            name="title"
+            type="text"
+            class="form-control"
+            id="title-input"
+            value="<%= data.title %>"
+          />
+        </div>
+        <div class="mb-3 mx-2">
+          <label for="category-input" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="category-input"
+            name="category"
+            value="<%= data.category %>"
+          />
+        </div>
+        <div class="mb-3 mx-2">
+          <label for="text-input" class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            rows="6"
+            id="text-input"
+            name="description"
+          >
+<%= data.description %></textarea
+          >
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Save Post</button>
+          <a class="btn btn-secondary" href="/cancel" role="button">Cancel</a>
+        </div>
+      </form>
+    </main>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>

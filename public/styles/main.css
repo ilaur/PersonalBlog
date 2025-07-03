@@ -1,0 +1,32 @@
+body {
+  background-color: #aec8a4;
+}
+
+nav {
+  background-color: #e7efc7;
+}
+
+footer {
+  background-color: #e7efc7;
+}
+
+a {
+  color: #8a784e;
+}
+
+.btn-primary,
+.btn-primary:hover {
+  background-color: #8a784e;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-danger,
+.btn-danger:hover {
+  background-color: #3b3b1a;
+}
+
+.form-control,
+.form-control:focus {
+  background-color: #e7efc7;
+}
